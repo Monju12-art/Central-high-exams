@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="centralhigh.css" rel="stylesheet" type="text/css" />
+
+    <title>Exams</title>
+  </head>
+  
+  <body>
+    <img src="./ok.png"  alt="" />
+
+<div id="head">  
+    <h1>
+      CENTRAL HIGH SCHOOL, PHILIDELPHIA. 
+    </h1>   
+    <h2>
+      END OF FIRST TERM EXAMINATION 
+      2022/2023 ACADEMIC YEAR, NOVEMBER,15,2023.<br />
+      STRAND: Mathematics for JHS one (1). 
+      DURATION: 30 minutes
+    </h2>
+    
+</div>
+
+
+<section class="questions"> 
+    <p>ANSWER ALL QUESTIONS</p>
+    <p id="triangle">
+      1.Calculate the Area of a triangle <br />
+      Enter the value of base
+      <input type="number" id="base" required /> <br />
+      Enter the value of height
+      <input type="number" id="height" required /> <br />
+      <button onclick="calculateTriangleArea()">Calculate</button> Answer:
+      <span id="triangleResult"></span>
+    </p>
+   
+
+    <p style="font-size: 19px">
+      2.Calculate the Area of a square <br />
+      Enter the value of side
+      <input type="number" id="side" required/> <br />
+      <button onclick="calculateSquareArea()">Calculate</button> Answer: <span id="squareResult"> </span>
+    </p>
+
+    <p style="font-size: 19px">
+      3.Calculate the volume of a cuboid <br />
+      Enter the value of length 
+      <input type="number" id="length" required/> <br />
+       Enter the value of width <input type="number" id="width"  required/> <br />
+       Enter the value of height <input type="number" id="cuboidHeight" required>
+      <br />
+      <button onclick="calculateCuboidVolume()">Calculate</button> Answer: <span id="cuboidResult"> </span>
+    </p>
+
+    <p style="font-size: 19px">
+      4.Get the name with the longest number of letters <br />
+      Enter the value of Isaaclyne
+      <input type="text" id="Isaaclyne" required/> <br />
+      Enter the value of Stephen <input type="text" id="Stephen" required /> <br />
+      <button onclick="getHighestName()">Calculate</button> Answer: <span id="nameResult"></span>
+    </p>
+    <label for="time">Submit work at:</label>
+    <input type="time" id="time" name="time" placeholder="10:30 AM"> <br>
+
+    <input type="SUBMIT">
+ 
+    
+</section>
+
+    <script>
+            function calculateTriangleArea() {
+            const base = parseFloat(document.getElementById('base').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const area = (base * height) / 2;
+            document.getElementById('triangleResult').innerText = area;
+        }
+
+
+function calculateSquareArea (){
+    const side= parseFloat(document.getElementById('side').value);
+    const area= (side * side);
+    document.getElementById('squareResult').innerHTML=area;
+}
+
+function calculateCuboidVolume (){
+    const length = parseFloat(document.getElementById('length').value);
+    const width= parseFloat(document.getElementById('width').value);
+    const height = parseFloat(document.getElementById('cuboidHeight').value);
+    const area= length* height* width;
+    document.getElementById('cuboidResult').innerHTML= area;
+}
+
+function getHighestName(){
+    const Isaaclyne= parseFloat( document.getElementById('Isaaclyne').value);
+    const Stephen = parseFloat(document.getElementById('Stephen').value);
+    const longerName = Isaaclyne.length > Stephen.length ? Stephen : Isaaclyne;
+    document.getElementById('nameResult').innerHTML= longerName;
+}
+
+    </script>
+  </body>
+</html>
